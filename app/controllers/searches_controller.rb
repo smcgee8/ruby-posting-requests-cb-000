@@ -8,6 +8,7 @@ class SearchesController < ApplicationController
       req.params['v'] = '20160201'
     end
     @friends = JSON.parse(resp.body)["response"]["friends"]["items"]
+    binding.pry
   end
 
   def foursquare
